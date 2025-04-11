@@ -4,8 +4,54 @@
     font-family: sans-serif;
 }
 
-section .bannerCarousel {
-    display: flex;
+section h2 {
+    margin: 50px;
+    text-align: center;
+}
 
+section .bannerCarousel {
+    position: relative;
     width: 100%;
+}
+
+.slick-prev {
+    position: absolute;
+
+    left: 37px;
+    padding: 15px;
+    top: 50%;
+    transform: translate(-50%);
+
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+    z-index: 10;
+
+    border-radius: 50%;
+    border: none;
+    color: blue;
+    background-color: rgb(226, 224, 224);
+}
+
+.slick-next {
+    position: absolute;
+
+    right: 0px;
+    padding: 15px;
+    top: 50%;
+    transform: translate(-50%);
+
+    opacity: 0;
+    pointer-events: none; /* deixa evento associado inativo*/
+    transition: 0.3s;
+
+    border-radius: 50%;
+    border: none;
+    color: blue;
+    background-color: rgb(226, 224, 224);
+}
+
+.bannerCarousel:hover .slick-next, .bannerCarousel:hover .slick-prev {
+    opacity: 1;
+    pointer-events: auto;
 }
