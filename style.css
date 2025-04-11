@@ -4,7 +4,7 @@
     font-family: sans-serif;
 }
 
-section h2 {
+section h1 {
     margin: 50px;
     text-align: center;
 }
@@ -54,4 +54,18 @@ section .bannerCarousel {
 .bannerCarousel:hover .slick-next, .bannerCarousel:hover .slick-prev {
     opacity: 1;
     pointer-events: auto;
+}
+
+/* department */
+
+section h2 {
+    margin: 50px;
+    text-align: center;
+}
+
+section .bannerCarouselDepartments {
+    position: relative; 
+    
+    width: 1200px;
+    margin: 0 auto;
 }
