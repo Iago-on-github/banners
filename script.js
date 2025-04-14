@@ -61,7 +61,6 @@ const bannersDepartment = [
     }
 ];
 
-
 for (let i = 0; i < fullBanner.length; i++) {
     let actualBanner = fullBanner[i];
 
