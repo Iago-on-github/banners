@@ -3,11 +3,13 @@
 const fullBanner = [
     {
         "image": "https://cdn.awsli.com.br/1920x1920/1791/1791543/banner/tmpvoltaasaulasfullbanner2-8991fbbba0.png",
-        "link": "#"
+        "link": "#",
+        "fullBannerMobile": "https://cdn.awsli.com.br/1791/1791543/arquivos/voltaasaulasFullbannerMobile1.png"
     },
     {
         "image": "https://cdn.awsli.com.br/1920x1920/1791/1791543/banner/tmpvoltaasaulasfullbanner3-ee57a0cd02.png",
-        "link": "#"
+        "link": "#",
+        "fullBannerMobile": "https://cdn.awsli.com.br/1791/1791543/arquivos/voltaasaulasFullbannerMobile3.png"
     }
 ];
 
@@ -62,8 +64,12 @@ for (let i = 0; i < fullBanner.length; i++) {
 
     const select = $(".bannerCarousel").children().eq(i); // catch one children of 'bannerCarousel' (in looping)
 
-    select.find("img").attr('src', actualBanner.image);
-    select.find("a").attr('href', actualBanner.link);    
+    if (window.innerWidth > 667) {
+        select.find("img").attr('src', actualBanner.image);
+        select.find("a").attr('href', actualBanner.link);   
+    } else {
+        select.find("img").attr('src', actualBanner.fullBannerMobile);
+    }
 }
 
 $('.bannerCarousel').slick({
@@ -77,7 +83,7 @@ $('.bannerCarousel').slick({
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                infinite: true
+                infinite: true,
             }
         },
     ]
@@ -106,6 +112,7 @@ $('.bannerCarouselDepartments').slick({
             settings: {
                 slidesToShow: 3,
                 slidesToScroll: 3,
+                speed: 300,
                 infinite: true
             }
         },
