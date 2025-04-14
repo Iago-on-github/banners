@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 section h1 {
@@ -42,7 +42,7 @@ section .bannerCarousel {
     transform: translate(-50%);
 
     opacity: 0;
-    pointer-events: none; /* deixa evento associado inativo*/
+    pointer-events: none; /* deixa evento associado inativo */
     transition: 0.3s;
 
     border-radius: 50%;
@@ -59,13 +59,56 @@ section .bannerCarousel {
 /* department */
 
 section h2 {
-    margin: 50px;
+    position: relative;
+    margin: 50px 0px 50px 0px;
     text-align: center;
+
+}
+
+.subtitleCarouselDepartments::after {
+    content: '';
+    position: absolute;
+
+    width: 50px;
+    height: 3px;
+    bottom: 1px;
+    left: 48%;
+    
+    transform: translateY(-50%);
+
+    background-color: blue;
+    border-radius: 2px;
 }
 
 section .bannerCarouselDepartments {
     position: relative; 
-    
-    width: 1200px;
+
+    width: 75%;
     margin: 0 auto;
+}
+
+.bannerCarouselDepartments li img {
+    max-width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+}
+
+.bannerCarouselDepartments a {
+    text-decoration: none;
+    color: rgb(53, 53, 53);
+    font-weight: bold;
+}
+
+.bannerCarouselDepartments p {
+    font-size: 16px;
+    font-weight: 300;
+
+    color: black;
+
+    margin: 30px 0px 0px 14px;
+}
+
+footer {
+    margin: 100px;
 }

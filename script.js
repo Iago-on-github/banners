@@ -61,7 +61,7 @@ for (let i = 0; i < fullBanner.length; i++) {
     let actualBanner = fullBanner[i];
 
     const select = $(".bannerCarousel").children().eq(i); // catch one children of 'bannerCarousel' (in looping)
-    
+
     select.find("img").attr('src', actualBanner.image);
     select.find("a").attr('href', actualBanner.link);    
 }
@@ -70,7 +70,17 @@ $('.bannerCarousel').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     prevArrow: '<button class="slick-prev">&#8592;</button>',
-    nextArrow: '<button class="slick-next">&#8594;</button>'
+    nextArrow: '<button class="slick-next">&#8594;</button>',
+    responsive: [
+        {
+            breakpoint: 667,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true
+            }
+        },
+    ]
 });
 
 // banners of department
@@ -78,7 +88,7 @@ $('.bannerCarousel').slick({
 for (let i = 0; i < bannersDepartment.length; i++) {
     let actualBanner = bannersDepartment[i];
 
-    const select = $(".bannersDepartment").children().eq(i);
+    const select = $(".bannerCarouselDepartments").children().eq(i);
 
     select.find("img").attr('src', actualBanner.image);
     select.find("p").text(actualBanner.title);
@@ -86,9 +96,19 @@ for (let i = 0; i < bannersDepartment.length; i++) {
 }
 
 $('.bannerCarouselDepartments').slick({
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    prevArrow: '<button class="slick-prev">&#8592;</button>',
-    nextArrow: '<button class="slick-next">&#8594;</button>'
+    slidesToShow: 5,
+    slidesToScroll: 5,
+    // prevArrow: '<button class="slick-prev-banner">&#8592;</button>',
+    // nextArrow: '<button class="slick-next-banner">&#8594;</button>',
+    responsive: [
+        {
+            breakpoint: 667,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true
+            }
+        },
+    ]
 });
 
