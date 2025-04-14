@@ -1,5 +1,3 @@
-// full banners
-
 const fullBanner = [
     {
         "image": "https://cdn.awsli.com.br/1920x1920/1791/1791543/banner/tmpvoltaasaulasfullbanner2-8991fbbba0.png",
@@ -10,6 +8,11 @@ const fullBanner = [
         "image": "https://cdn.awsli.com.br/1920x1920/1791/1791543/banner/tmpvoltaasaulasfullbanner3-ee57a0cd02.png",
         "link": "#",
         "fullBannerMobile": "https://cdn.awsli.com.br/1791/1791543/arquivos/voltaasaulasFullbannerMobile3.png"
+    },
+    {
+        "image": "https://cdn.awsli.com.br/1920x1920/1791/1791543/banner/tmpvoltaasaulasfullbanner1-1a5fb9632e.png",
+        "link": "#",
+        "fullBannerMobile": "https://cdn.awsli.com.br/1791/1791543/arquivos/voltaasaulasFullbannerMobile2.png"
     }
 ];
 
